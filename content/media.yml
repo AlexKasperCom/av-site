@@ -1,0 +1,77 @@
+images:
+
+  # -------------------------------------------------------
+  # CERTIFICATE
+  # -------------------------------------------------------
+  hwk_certificate:
+    file: assets/images/hwk-certificate-blurred.jpg
+    date: 2014-06-15
+    location: Berlin
+    alt: Blurred German Handwerkskammer certificate issued in Berlin.
+    caption: Official German Chamber of Crafts certificate issued in Berlin.
+    roles: [credential, about-page]
+
+  # -------------------------------------------------------
+  # PORTRAITS / HERO IMAGES
+  # -------------------------------------------------------
+  portrait_main:
+    file: assets/images/portrait-main.webp
+    date: 2025-01-10
+    location: Montreal
+    alt: Portrait of Alison Vermaat, German-trained hairdresser in Montreal.
+    caption: Alison Vermaat in her Montreal studio.
+    roles: [hero, about-page]
+
+  portrait_secondary:
+    file: assets/images/portrait-secondary.webp
+    date: 2025-01-10
+    location: Montreal
+    alt: Additional portrait of Alison Vermaat.
+    caption: Secondary portrait option.
+    roles: [about-page]
+
+  # -------------------------------------------------------
+  # WORK EXAMPLES (PORTFOLIO)
+  # -------------------------------------------------------
+  work_2023_montreal_updo:
+    file: assets/images/work_2023-montreal-updo.webp
+    date: 2023-11-20
+    location: Montreal
+    alt: Elegant updo hairstyle created in Montreal.
+    caption: Updo created in Montreal, 2023.
+    tags: [updo, bridal, styling]
+    facesBlurred: true
+    roles: [portfolio]
+
+  work_2020_montreal_color:
+    file: assets/images/work_2020-montreal-color.webp
+    date: 2020-08-14
+    location: Montreal
+    alt: Copper balayage example.
+    caption: Copper balayage from her Montreal studio.
+    tags: [balayage, color]
+    facesBlurred: true
+    roles: [portfolio]
+
+  work_2018_berlin_bob:
+    file: assets/images/work_2018-berlin-bob.webp
+    date: 2018-03-02
+    location: Berlin
+    alt: Precision bob haircut with clean lines.
+    caption: Precision bob created in Berlin, 2018.
+    tags: [bob, classic, precision]
+    facesBlurred: true
+    roles: [portfolio]
+
+  # -------------------------------------------------------
+  # LOGOS / GRAPHICS
+  # -------------------------------------------------------
+  logo_primary:
+    file: assets/images/logo-primary.png
+    alt: Logo for Alison Vermaat.
+    roles: [nav, footer]
+
+  favicon:
+    file: assets/images/favicon.png
+    alt: Favicon for the site.
+    roles: [head]
