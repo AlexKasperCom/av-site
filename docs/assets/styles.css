@@ -43,12 +43,14 @@ header.site-header {
   z-index: 10;
 }
 
+/* Slight tweak so header content respects full width */
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 0;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .brand {
@@ -234,20 +236,31 @@ footer .footer-inner {
   align-items: center;
 }
 
+/* Mobile tweaks */
 @media (max-width: 720px) {
+
+  /* A little extra side padding site-wide on phones */
+  .container {
+    padding: 0 1.75rem;
+  }
+
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
   }
+
   nav ul {
     flex-wrap: wrap;
   }
+
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .hero {
     padding-top: 2rem;
   }
