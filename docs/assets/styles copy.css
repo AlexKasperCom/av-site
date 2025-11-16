@@ -239,36 +239,16 @@ footer .footer-inner {
     flex-direction: column;
     align-items: flex-start;
   }
-
   nav ul {
     flex-wrap: wrap;
   }
-
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-
   .hero {
     padding-top: 2rem;
-  }
-
-  /* --- Hero image scaling fix for Chrome mobile --- */
-  .hero-photo {
-    max-width: 260px;          /* keeps the image from becoming enormous */
-    margin: 1.5rem auto 0;     /* centers image on mobile */
-    border-radius: 24px;
-    overflow: hidden;
-  }
-
-  .hero-photo img {
-    width: 100%;
-    height: auto;
-    max-height: 340px;         /* adjust to taste */
-    object-fit: cover;
-    display: block;
   }
 }
