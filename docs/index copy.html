@@ -92,45 +92,19 @@
 </script>
 <!-- Change to French language if preferred -->
 <script>
-(function() {
-  const COOKIE_NAME = "lang_pref";
-  const COOKIE_DAYS = 365;
+  // Browser language detection with fallback safety
+  (function() {
+    const userLang = navigator.language || navigator.userLanguage;
 
-  // Read cookie
-  function getCookie(name) {
-    const value = ("; " + document.cookie).split("; " + name + "=");
-    return value.length === 2 ? value.pop().split(";").shift() : null;
-  }
-
-  // Write cookie
-  function setCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-  }
-
-  // If cookie already set → respect it
-  const savedLang = getCookie(COOKIE_NAME);
-  if (savedLang) {
-    if (savedLang === "fr" && !location.pathname.includes("/fr/")) {
-      window.location.replace("fr/index.html");
+    // Only redirect if:
+    // 1. Browser language starts with "fr"
+    // 2. We are not already on /fr/
+    if (userLang && userLang.toLowerCase().startsWith("fr")) {
+      if (!window.location.pathname.includes("/fr/")) {
+        window.location.replace("fr/index.html");
+      }
     }
-    return; // Don't auto-detect if cookie exists
-  }
-
-  // No cookie? Detect browser language
-  const browserLang = navigator.language || navigator.userLanguage;
-
-  if (browserLang && browserLang.toLowerCase().startsWith("fr")) {
-    // Redirect only if not already there
-    if (!location.pathname.includes("/fr/")) {
-      // Save preference
-      setCookie(COOKIE_NAME, "fr", COOKIE_DAYS);
-      window.location.replace("fr/index.html");
-    }
-  }
-})();
+  })();
 </script>
 
 </head>
@@ -145,7 +119,7 @@
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="https://book.squareup.com/appointments/a61c18f4-47b8-4120-b213-162e80418e71/location/083S261VAGXM2/services?team_member_id=TMOB4-MGZw8AaShi" target="_blank" rel="noopener">Book Online</a></li>
-        <li><a href="fr/index.html" onclick="document.cookie='lang_pref=fr;path=/;max-age=31536000'">FR</a></li>
+        <li><a href="fr/index.html">FR</a></li>
       </ul>
     </nav>
   </div>
