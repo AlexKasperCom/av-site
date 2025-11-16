@@ -1,0 +1,6 @@
+# À propos de moi
+Je suis née en Irlande et j’ai immigré au Canada à l’adolescence. J’ai appris mon métier à Montréal comme apprentie auprès des meilleurs stylistes, influencée par une équipe diversifiée et avisée composée d’Américains, de Québécois et de Canadiens anglophones.
+
+Je dirigeais mon propre salon, Level 3, au centre-ville de Montréal lorsque j’ai rencontré mon (désormais) mari, et l’amour m’a ramenée en Europe pour une nouvelle aventure. J’ai choisi Berlin pour m’y réinstaller et y ouvrir un nouveau chapitre, où l’on sollicitait souvent mon expertise des styles nord-américains. J’y ai aussi appris une nouvelle langue — toujours avec un accent affreux. Aujourd’hui, je parle couramment l’anglais, le français et l’allemand, et je suis probablement la seule coiffeuse montréalaise à détenir également un *Meister-Zertifikat de la Handwerkskammer* allemande. Qu’il s’agisse d’une coupe moderne ou d’un balayage, je prends plaisir à rendre les choses complexes simples.
+
+Après neuf ans à l’étranger, nous sommes revenus à Montréal en 2022.

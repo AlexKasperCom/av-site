@@ -16,6 +16,7 @@
 
 <!-- Language -->
 <link rel="alternate" hreflang="fr" href="https://alisonvermaat.com/fr/index.html" />
+<link rel="alternate" hreflang="de" href="https://alisonvermaat.com/de/index.html" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="assets/images/icon_0032.png"/>
@@ -90,7 +91,7 @@
   }
 }
 </script>
-<!-- Change to French language if preferred -->
+<!-- Change to user preferred language  -->
 <script>
 (function() {
   const COOKIE_NAME = "lang_pref";
@@ -105,34 +106,49 @@
   // Write cookie
   function setCookie(name, value, days) {
     const date = new Date();
-    date.setTime(date.getTime() + (days*24*60*60*1000));
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
   }
 
-  // If cookie already set → respect it
-  const savedLang = getCookie(COOKIE_NAME);
-  if (savedLang) {
-    if (savedLang === "fr" && !location.pathname.includes("/fr/")) {
-      window.location.replace("fr/index.html");
-    }
-    return; // Don't auto-detect if cookie exists
+  function inLangPath(lang) {
+    return location.pathname.includes("/" + lang + "/");
   }
 
-  // No cookie? Detect browser language
-  const browserLang = navigator.language || navigator.userLanguage;
-
-  if (browserLang && browserLang.toLowerCase().startsWith("fr")) {
-    // Redirect only if not already there
-    if (!location.pathname.includes("/fr/")) {
-      // Save preference
-      setCookie(COOKIE_NAME, "fr", COOKIE_DAYS);
-      window.location.replace("fr/index.html");
+  function redirectTo(lang) {
+    if (!inLangPath(lang)) {
+      window.location.replace(lang + "/index.html");
     }
+  }
+
+  // 1. Respect existing cookie
+  const savedLang = getCookie(COOKIE_NAME);
+  if (savedLang) {
+    if (savedLang === "fr") {
+      redirectTo("fr");
+    } else if (savedLang === "de") {
+      redirectTo("de");
+    }
+    // If "en" or anything else, stay on default
+    return;
+  }
+
+  // 2. No cookie? Detect browser language
+  const browserLang = (navigator.language || navigator.userLanguage || "").toLowerCase();
+
+  if (browserLang.startsWith("fr")) {
+    setCookie(COOKIE_NAME, "fr", COOKIE_DAYS);
+    redirectTo("fr");
+  } else if (browserLang.startsWith("de")) {
+    setCookie(COOKIE_NAME, "de", COOKIE_DAYS);
+    redirectTo("de");
+  } else {
+    // Default to English, but also store the preference
+    setCookie(COOKIE_NAME, "en", COOKIE_DAYS);
+    // No redirect needed if your root is English
   }
 })();
 </script>
-
 </head>
 
 <body>
@@ -146,6 +162,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="https://book.squareup.com/appointments/a61c18f4-47b8-4120-b213-162e80418e71/location/083S261VAGXM2/services?team_member_id=TMOB4-MGZw8AaShi" target="_blank" rel="noopener">Book Online</a></li>
         <li><a href="fr/index.html" onclick="document.cookie='lang_pref=fr;path=/;max-age=31536000'">FR</a></li>
+        <li><a href="de/index.html" onclick="document.cookie='lang_pref=de;path=/;max-age=31536000'">DE</a></li>
       </ul>
     </nav>
   </div>
@@ -200,7 +217,8 @@
         <div class="label" style="margin-top: 1rem;">Social</div>
         <div class="contact-item">
           <a href="https://www.instagram.com/alisonvermaat/" target="_blank" rel="noopener">Instagram</a><br>
-          <a href="https://www.facebook.com/AlisonVermaatHair/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.facebook.com/AlisonVermaatHair/" target="_blank" rel="noopener">Facebook</a><br>
+          <a href="https://www.linkedin.com/in/alison-vermaat-60738720/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
       </div>
