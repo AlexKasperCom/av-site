@@ -234,6 +234,35 @@ footer .footer-inner {
   align-items: center;
 }
 
+.ns-tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #666;
+}
+
+.ns-tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 120%;
+  background: #222;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  width: 280px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  transition: opacity 0.25s ease;
+  z-index: 200;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* moved here */
+}
+
+.ns-tooltip:hover .ns-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (max-width: 720px) {
   .header-inner {
     flex-direction: column;
