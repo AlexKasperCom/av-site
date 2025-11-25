@@ -2,7 +2,7 @@
 
 Des services de coloration et des coupes réalisés avec une précision remarquable. Alison Vermaat adore le style.
 
-Alison est une styliste expérimentée basée à Montréal, offrant des services de coloration réfléchis et des coupes précises dans un environnement calme, sur rendez-vous uniquement.
+Alison est une styliste expérimentée basée à Montréal, offrant des services de couleurs bien conçues et des coupes minutieuses dans un environnement calme, sur rendez-vous uniquement.
 
 [**Cliquez pour réserver**](https://book.squareup.com/appointments/a61c18f4-47b8-4120-b213-162e80418e71/location/083S261VAGXM2/services?team_member_id=TMOB4-MGZw8AaShi) | [**Laissez un avis Google**](https://g.page/r/CZDIIzeqloTgEBM/review)
 
