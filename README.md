@@ -1,4 +1,4 @@
-# alisonvermaat-site
+# av-site
 
 This repository contains the source files for **alisonvermaat.com**, the portfolio website for stylist **Alison Vermaat** in Montreal.  
 The project is structured so that *all content and metadata live in Markdown/YAML*, and the final HTML pages in `site/` can be built or updated from that source.
